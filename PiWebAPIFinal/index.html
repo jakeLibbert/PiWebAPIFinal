@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Outage and Emergency Tracker</title>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/app.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="login">
+        <h3>Outage and Emergency Tracker: Login</h3>
+        <form>
+            <div class="form-group">
+                <label for="username">User name</label>
+                <input type="text" class="form-control" id="username" placeholder="User name" />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" />
+            </div>
+            <button type="button" id="btnLogin" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+    <div id="dataView" style="display : none; padding-left:150px;">
+        <div style="min-width:1000px">
+            <div class="dataDiv" >
+                <h3>Circuit</h3>
+                <select id="circuitSelect" style="width:150px;" onchange="circuitChange()">
+                    <option value="">-select-</option>
+                </select>
+            </div>
+            <div class="dataDiv valuesContainer" style="display : none;">
+                <h3>Total Outages</h3>
+                <h4 id="lblTotalOutage"></h4>
+                <h3>
+                    Last Outage Event
+                </h3>
+                <h4 id="outName"></h4>
+            </div>
+            <div class="dataDiv valuesContainer" style="display : none;">
+                <h3>Total Emergencies</h3>
+                <h4 id="lblTotalEmergencies"></h4>
+                <h3>
+                    Last Emergency Event
+                </h3>
+                <h4 id="emerName"></h4>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="dataDiv valuesContainer" style="display : none;">
+                <h4>Overall Circuit Status:</h4><h4 id="lblCurrentStatus"></h4>
+            </div>
+            <div class="dataDiv valuesContainer" style="display : none;">
+                <h4>Update Circuit Status</h4>
+                <select id="statusSelect" style="width:150px;">
+                    <option value="">-select-</option>
+                    <option value="true">Good Status</option>
+                    <option value="false">Alarm Status</option>
+                </select>
+                <input id="btnUpdateStatus" type="button" onclick="updateStatus()" value="Submit" />
+            </div>
+
+        </div>
+
+
+    </div>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="Scripts/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="Scripts/piwebapi_wrapper.js"></script>
+    <script type="text/javascript" src="Scripts/app.js"></script>
+</body>
+</html>

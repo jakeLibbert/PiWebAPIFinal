@@ -1,0 +1,41 @@
+﻿
+* {
+	margin: 0;
+	padding: 0;
+}
+		
+html, body, #dataView, #login {
+	width: 100%;
+	height: 100%;
+}
+
+#dataView{
+    text-align:center;
+}
+
+#circuitSelect{
+    
+}	
+
+.dataDiv{
+    float:left;
+    margin:30px;
+}
+
+		
+#other {
+	width: 100%;
+	height: 30%;
+	bottom: 0px;
+}
+		
+
+		
+#info *, #login * {
+	position: relative;
+}
+
+#login {
+    padding: 200px 300px 300px 300px;
+}
+
