@@ -1,21 +1,27 @@
 ﻿
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 		
 html, body, #dataView, #login {
 	width: 100%;
 	height: 100%;
+
 }
 
-#dataView{
-    text-align:center;
+#dataView {
+    text-align: center;
+    background-color: aliceblue;
 }
 
 #circuitSelect{
     
-}	
+}
+
+#circuitSelector {
+    padding:100px;
+}
 
 .dataDiv{
     float:left;
@@ -28,11 +34,13 @@ html, body, #dataView, #login {
 	height: 30%;
 	bottom: 0px;
 }
-		
 
-		
+h4{
+    color:maroon;
+}
+
 #info *, #login * {
-	position: relative;
+    position: relative;
 }
 
 #login {
