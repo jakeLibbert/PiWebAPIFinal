@@ -4,7 +4,7 @@ var baseServiceUrl = "https://osi.burnsmcdbts.com/PIWebApi/";
 var statusWebID;
 
 var authSuccessCallBack = function (data, statusMessage, statusObj) {
-    if (statusObj.status == 200) {
+    if (statusObj.status === 200) {
         $("#login").hide();
         $("#dataView").show();
 
@@ -13,7 +13,7 @@ var authSuccessCallBack = function (data, statusMessage, statusObj) {
 };
 
 var authErrorCallBack = function (data) {
-    if (data.status == 401) {
+    if (data.status === 401) {
         alert("Invalid username and password.");
     }
     else {
@@ -33,7 +33,7 @@ function loadCircuitCallBak(data) {
 
 function circuitChange() {
     var newCircuit = $('#circuitSelect').val();
-    if (newCircuit != "") {
+    if (newCircuit !== "") {
         $(".valuesContainer").show();
         piwebapi.GetAllEvents(newCircuit);
 
